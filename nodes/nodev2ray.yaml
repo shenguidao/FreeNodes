@@ -1,192 +1,180 @@
 allow-lan: true
-bind-address: '*'
-dns:
-  default-nameserver:
-  - 119.29.29.29
-  - 223.5.5.5
-  enable: true
-  enhanced-mode: fake-ip
-  fake-ip-filter:
-  - '*.lan'
-  - '*.local'
-  - '*.arpa'
-  - time.*.com
-  - ntp.*.com
-  - +.market.xiaomi.com
-  - localhost.ptlogin2.qq.com
-  - '*.msftncsi.com'
-  - www.msftconnecttest.com
-  fake-ip-range: 198.18.0.1/16
-  fallback:
-  - 8.8.8.8
-  - 1.1.1.1
-  - tls://1.0.0.1:853
-  - tls://dns.google:853
-  fallback-filter:
-    geoip: true
-    geoip-code: CN
-    geosite:
-    - gfw
-    ipcidr:
-    - 240.0.0.0/4
-  ipv6: false
-  listen: 0.0.0.0:53
-  nameserver:
-  - 119.29.29.29
-  - 223.5.5.5
-  nameserver-policy:
-    geosite:cn:
-    - 119.29.29.29
-    - 223.5.5.5
-    geosite:geolocation-!cn:
-    - tls://1.0.0.1:853
-    - tls://dns.google:853
-  proxy-server-nameserver:
-  - 119.29.29.29
-  - 223.5.5.5
-  use-hosts: true
-external-controller: 127.0.0.1:9090
-ipv6: false
+external-controller: :9090
 log-level: info
+mixed-port: 7890
 mode: Rule
-port: 7890
 proxies:
-- cipher: aes-256-cfb
-  name: 8元老牌专线机场：cczzuu.top
-  password: amazonskr05
-  port: 443
-  server: 63.180.254.10
-  type: ss
-- alterId: 2
+- alterId: 0
   cipher: auto
-  name: 🇭🇰 香港|@stairnode
-  port: 30807
-  server: v10.hdacd.com
-  skip-cert-verify: false
+  name: 8元老牌专线机场：cczzuu.top
+  port: 7754
+  server: efan.dnsefan04881.com
+  skip-cert-verify: true
+  tfo: false
   tls: false
   type: vmess
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- name: 🇭🇰 香港3|@stairnode
-  password: 868ecdaf6aed618ec98cf78585672b2b
-  port: 52687
-  server: 16.162.188.94
-  skip-cert-verify: false
-  sni: www.nintendogames.net
-  type: trojan
-- name: 🇭🇰 香港4|@stairnode
-  password: BxceQaOe
-  port: 6313
-  server: 54.65.250.149
+  uuid: 009e558d-3cf4-49d8-b5e4-82c9e14fe1a4
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧 英国 CCZZUU.TOP
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.210
+  tfo: false
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 🇬🇧 英国 CCZZUU.TOP 2
+  port: 180
+  server: 82.198.246.97
   skip-cert-verify: true
-  sni: t.me%2Fripaojiedian
-  type: trojan
-- name: 🇭🇰 香港5|@stairnode
-  password: BxceQaOe
-  port: 9211
-  server: 43.199.33.120
+  tfo: false
+  tls: false
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+- cipher: chacha20-ietf-poly1305
+  name: 🇺🇸 美国 华盛顿Cogent通信公司
+  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
+  port: 990
+  server: 38.89.142.56
+  tfo: false
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧 英国 CCZZUU.TOP 3
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.101
+  tfo: false
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧 英国 CCZZUU.TOP 4
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.69
+  tfo: false
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧 英国 CCZZUU.TOP 5
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.61
+  tfo: false
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 🇬🇧 英国 CCZZUU.TOP 6
+  port: 180
+  server: 82.198.246.37
   skip-cert-verify: true
-  sni: t.me%2Fripaojiedian
-  type: trojan
-- name: 🇯🇵 日本|@stairnode
-  password: BxceQaOe
-  port: 1783
-  server: 57.180.27.122
+  tfo: false
+  tls: false
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+- alterId: 0
+  cipher: auto
+  name: 🇭🇰 香港 电讯盈科有限公司
+  port: 7754
+  server: efan.dnsefan04881.com
   skip-cert-verify: true
-  sni: t.me%252Fripaojiedian
-  type: trojan
-- name: 🇯🇵 日本2|@stairnode
-  password: 868ecdaf6aed618ec98cf78585672b2b
-  port: 4937
-  server: 160.16.85.33
-  skip-cert-verify: false
-  sni: www.nintendogames.net
-  type: trojan
-- name: 🇯🇵 日本3|@stairnode
-  password: 868ecdaf6aed618ec98cf78585672b2b
-  port: 4380
-  server: 54.249.109.55
-  skip-cert-verify: false
-  sni: www.nintendogames.net
-  type: trojan
-- name: 🇸🇬 新加坡|@stairnode
-  password: 868ecdaf6aed618ec98cf78585672b2b
-  port: 4674
-  server: 13.115.146.132
-  skip-cert-verify: false
-  sni: www.nintendogames.net
-  type: trojan
-- name: 🇸🇬 新加坡2|@stairnode
-  password: 868ecdaf6aed618ec98cf78585672b2b
-  port: 4674
-  server: 54.249.109.55
-  skip-cert-verify: false
-  sni: www.nintendogames.net
-  type: trojan
-- name: 🇸🇬 新加坡3|@stairnode
-  password: BxceQaOe
-  port: 28033
-  server: 43.199.217.68
+  tfo: false
+  tls: false
+  type: vmess
+  uuid: 009e558d-3cf4-49d8-b5e4-82c9e14fe1a4
+- alterId: 0
+  cipher: auto
+  name: 🇬🇧 英国 CCZZUU.TOP 7
+  port: 180
+  server: 82.198.246.250
   skip-cert-verify: true
-  sni: t.me%252Fripaojiedian
-  type: trojan
-- name: 🇺🇸 美国|@stairnode
-  password: 868ecdaf6aed618ec98cf78585672b2b
-  port: 4019
-  server: 54.249.109.55
-  skip-cert-verify: false
-  sni: www.nintendogames.net
-  type: trojan
-- name: 🇺🇸 美国2|@stairnode
-  password: 868ecdaf6aed618ec98cf78585672b2b
-  port: 3057
-  server: 13.115.246.132
-  skip-cert-verify: false
-  sni: www.nintendogames.net
-  type: trojan
-- name: 🇺🇸 美国3|@stairnode
-  password: BxceQaOe
-  port: 14919
-  server: 16.162.217.109
+  tfo: false
+  tls: false
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧 英国 伦敦Microsoft公司
+  password: 1kVr0KATIJI7mwOF
+  port: 443
+  server: admin.c1.havij.co
+  tfo: false
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 🇬🇧 英国 CCZZUU.TOP 8
+  port: 180
+  server: 82.198.246.9
   skip-cert-verify: true
-  sni: t.me%2Fripaojiedian
+  tfo: false
+  tls: false
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+- cipher: chacha20-ietf-poly1305
+  name: 🇺🇸 美国 华盛顿Cogent通信公司 2
+  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
+  port: 990
+  server: 38.165.231.25
+  tfo: false
+  type: ss
+- name: 🇪🇸 西班牙 CCZZUU.TOP
+  password: a5inYFE=JGV89+hjxIqgDp1tcWBd6
+  port: 26279
+  server: 80.173.230.196
+  skip-cert-verify: true
+  tfo: false
   type: trojan
+- cipher: chacha20-ietf-poly1305
+  name: 🇺🇸 美国 CCZZUU.TOP
+  password: 7a106afc33eaa261
+  port: 46534
+  server: 148.113.139.160
+  tfo: false
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧 英国 伦敦Microsoft公司 2
+  password: W74XFALLLuw6m5IA
+  port: 443
+  server: series-a2.samanehha.co
+  tfo: false
+  type: ss
 proxy-groups:
 - name: 🚀 节点选择
   proxies:
   - ♻️ 自动选择
   - DIRECT
   - 8元老牌专线机场：cczzuu.top
-  - 🇭🇰 香港|@stairnode
-  - 🇭🇰 香港3|@stairnode
-  - 🇭🇰 香港4|@stairnode
-  - 🇭🇰 香港5|@stairnode
-  - 🇯🇵 日本|@stairnode
-  - 🇯🇵 日本2|@stairnode
-  - 🇯🇵 日本3|@stairnode
-  - 🇸🇬 新加坡|@stairnode
-  - 🇸🇬 新加坡2|@stairnode
-  - 🇸🇬 新加坡3|@stairnode
-  - 🇺🇸 美国|@stairnode
-  - 🇺🇸 美国2|@stairnode
-  - 🇺🇸 美国3|@stairnode
+  - 🇬🇧 英国 CCZZUU.TOP
+  - 🇬🇧 英国 CCZZUU.TOP 2
+  - 🇺🇸 美国 华盛顿Cogent通信公司
+  - 🇬🇧 英国 CCZZUU.TOP 3
+  - 🇬🇧 英国 CCZZUU.TOP 4
+  - 🇬🇧 英国 CCZZUU.TOP 5
+  - 🇬🇧 英国 CCZZUU.TOP 6
+  - 🇭🇰 香港 电讯盈科有限公司
+  - 🇬🇧 英国 CCZZUU.TOP 7
+  - 🇬🇧 英国 伦敦Microsoft公司
+  - 🇬🇧 英国 CCZZUU.TOP 8
+  - 🇺🇸 美国 华盛顿Cogent通信公司 2
+  - 🇪🇸 西班牙 CCZZUU.TOP
+  - 🇺🇸 美国 CCZZUU.TOP
+  - 🇬🇧 英国 伦敦Microsoft公司 2
   type: select
 - interval: 300
   name: ♻️ 自动选择
   proxies:
   - 8元老牌专线机场：cczzuu.top
-  - 🇭🇰 香港|@stairnode
-  - 🇭🇰 香港3|@stairnode
-  - 🇭🇰 香港4|@stairnode
-  - 🇭🇰 香港5|@stairnode
-  - 🇯🇵 日本|@stairnode
-  - 🇯🇵 日本2|@stairnode
-  - 🇯🇵 日本3|@stairnode
-  - 🇸🇬 新加坡|@stairnode
-  - 🇸🇬 新加坡2|@stairnode
-  - 🇸🇬 新加坡3|@stairnode
-  - 🇺🇸 美国|@stairnode
-  - 🇺🇸 美国2|@stairnode
-  - 🇺🇸 美国3|@stairnode
+  - 🇬🇧 英国 CCZZUU.TOP
+  - 🇬🇧 英国 CCZZUU.TOP 2
+  - 🇺🇸 美国 华盛顿Cogent通信公司
+  - 🇬🇧 英国 CCZZUU.TOP 3
+  - 🇬🇧 英国 CCZZUU.TOP 4
+  - 🇬🇧 英国 CCZZUU.TOP 5
+  - 🇬🇧 英国 CCZZUU.TOP 6
+  - 🇭🇰 香港 电讯盈科有限公司
+  - 🇬🇧 英国 CCZZUU.TOP 7
+  - 🇬🇧 英国 伦敦Microsoft公司
+  - 🇬🇧 英国 CCZZUU.TOP 8
+  - 🇺🇸 美国 华盛顿Cogent通信公司 2
+  - 🇪🇸 西班牙 CCZZUU.TOP
+  - 🇺🇸 美国 CCZZUU.TOP
+  - 🇬🇧 英国 伦敦Microsoft公司 2
   tolerance: 50
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -196,76 +184,84 @@ proxy-groups:
   - ♻️ 自动选择
   - 🎯 全球直连
   - 8元老牌专线机场：cczzuu.top
-  - 🇭🇰 香港|@stairnode
-  - 🇭🇰 香港3|@stairnode
-  - 🇭🇰 香港4|@stairnode
-  - 🇭🇰 香港5|@stairnode
-  - 🇯🇵 日本|@stairnode
-  - 🇯🇵 日本2|@stairnode
-  - 🇯🇵 日本3|@stairnode
-  - 🇸🇬 新加坡|@stairnode
-  - 🇸🇬 新加坡2|@stairnode
-  - 🇸🇬 新加坡3|@stairnode
-  - 🇺🇸 美国|@stairnode
-  - 🇺🇸 美国2|@stairnode
-  - 🇺🇸 美国3|@stairnode
+  - 🇬🇧 英国 CCZZUU.TOP
+  - 🇬🇧 英国 CCZZUU.TOP 2
+  - 🇺🇸 美国 华盛顿Cogent通信公司
+  - 🇬🇧 英国 CCZZUU.TOP 3
+  - 🇬🇧 英国 CCZZUU.TOP 4
+  - 🇬🇧 英国 CCZZUU.TOP 5
+  - 🇬🇧 英国 CCZZUU.TOP 6
+  - 🇭🇰 香港 电讯盈科有限公司
+  - 🇬🇧 英国 CCZZUU.TOP 7
+  - 🇬🇧 英国 伦敦Microsoft公司
+  - 🇬🇧 英国 CCZZUU.TOP 8
+  - 🇺🇸 美国 华盛顿Cogent通信公司 2
+  - 🇪🇸 西班牙 CCZZUU.TOP
+  - 🇺🇸 美国 CCZZUU.TOP
+  - 🇬🇧 英国 伦敦Microsoft公司 2
   type: select
 - name: 📲 电报信息
   proxies:
   - 🚀 节点选择
   - 🎯 全球直连
   - 8元老牌专线机场：cczzuu.top
-  - 🇭🇰 香港|@stairnode
-  - 🇭🇰 香港3|@stairnode
-  - 🇭🇰 香港4|@stairnode
-  - 🇭🇰 香港5|@stairnode
-  - 🇯🇵 日本|@stairnode
-  - 🇯🇵 日本2|@stairnode
-  - 🇯🇵 日本3|@stairnode
-  - 🇸🇬 新加坡|@stairnode
-  - 🇸🇬 新加坡2|@stairnode
-  - 🇸🇬 新加坡3|@stairnode
-  - 🇺🇸 美国|@stairnode
-  - 🇺🇸 美国2|@stairnode
-  - 🇺🇸 美国3|@stairnode
+  - 🇬🇧 英国 CCZZUU.TOP
+  - 🇬🇧 英国 CCZZUU.TOP 2
+  - 🇺🇸 美国 华盛顿Cogent通信公司
+  - 🇬🇧 英国 CCZZUU.TOP 3
+  - 🇬🇧 英国 CCZZUU.TOP 4
+  - 🇬🇧 英国 CCZZUU.TOP 5
+  - 🇬🇧 英国 CCZZUU.TOP 6
+  - 🇭🇰 香港 电讯盈科有限公司
+  - 🇬🇧 英国 CCZZUU.TOP 7
+  - 🇬🇧 英国 伦敦Microsoft公司
+  - 🇬🇧 英国 CCZZUU.TOP 8
+  - 🇺🇸 美国 华盛顿Cogent通信公司 2
+  - 🇪🇸 西班牙 CCZZUU.TOP
+  - 🇺🇸 美国 CCZZUU.TOP
+  - 🇬🇧 英国 伦敦Microsoft公司 2
   type: select
 - name: Ⓜ️ 微软服务
   proxies:
   - 🎯 全球直连
   - 🚀 节点选择
   - 8元老牌专线机场：cczzuu.top
-  - 🇭🇰 香港|@stairnode
-  - 🇭🇰 香港3|@stairnode
-  - 🇭🇰 香港4|@stairnode
-  - 🇭🇰 香港5|@stairnode
-  - 🇯🇵 日本|@stairnode
-  - 🇯🇵 日本2|@stairnode
-  - 🇯🇵 日本3|@stairnode
-  - 🇸🇬 新加坡|@stairnode
-  - 🇸🇬 新加坡2|@stairnode
-  - 🇸🇬 新加坡3|@stairnode
-  - 🇺🇸 美国|@stairnode
-  - 🇺🇸 美国2|@stairnode
-  - 🇺🇸 美国3|@stairnode
+  - 🇬🇧 英国 CCZZUU.TOP
+  - 🇬🇧 英国 CCZZUU.TOP 2
+  - 🇺🇸 美国 华盛顿Cogent通信公司
+  - 🇬🇧 英国 CCZZUU.TOP 3
+  - 🇬🇧 英国 CCZZUU.TOP 4
+  - 🇬🇧 英国 CCZZUU.TOP 5
+  - 🇬🇧 英国 CCZZUU.TOP 6
+  - 🇭🇰 香港 电讯盈科有限公司
+  - 🇬🇧 英国 CCZZUU.TOP 7
+  - 🇬🇧 英国 伦敦Microsoft公司
+  - 🇬🇧 英国 CCZZUU.TOP 8
+  - 🇺🇸 美国 华盛顿Cogent通信公司 2
+  - 🇪🇸 西班牙 CCZZUU.TOP
+  - 🇺🇸 美国 CCZZUU.TOP
+  - 🇬🇧 英国 伦敦Microsoft公司 2
   type: select
 - name: 🍎 苹果服务
   proxies:
   - 🚀 节点选择
   - 🎯 全球直连
   - 8元老牌专线机场：cczzuu.top
-  - 🇭🇰 香港|@stairnode
-  - 🇭🇰 香港3|@stairnode
-  - 🇭🇰 香港4|@stairnode
-  - 🇭🇰 香港5|@stairnode
-  - 🇯🇵 日本|@stairnode
-  - 🇯🇵 日本2|@stairnode
-  - 🇯🇵 日本3|@stairnode
-  - 🇸🇬 新加坡|@stairnode
-  - 🇸🇬 新加坡2|@stairnode
-  - 🇸🇬 新加坡3|@stairnode
-  - 🇺🇸 美国|@stairnode
-  - 🇺🇸 美国2|@stairnode
-  - 🇺🇸 美国3|@stairnode
+  - 🇬🇧 英国 CCZZUU.TOP
+  - 🇬🇧 英国 CCZZUU.TOP 2
+  - 🇺🇸 美国 华盛顿Cogent通信公司
+  - 🇬🇧 英国 CCZZUU.TOP 3
+  - 🇬🇧 英国 CCZZUU.TOP 4
+  - 🇬🇧 英国 CCZZUU.TOP 5
+  - 🇬🇧 英国 CCZZUU.TOP 6
+  - 🇭🇰 香港 电讯盈科有限公司
+  - 🇬🇧 英国 CCZZUU.TOP 7
+  - 🇬🇧 英国 伦敦Microsoft公司
+  - 🇬🇧 英国 CCZZUU.TOP 8
+  - 🇺🇸 美国 华盛顿Cogent通信公司 2
+  - 🇪🇸 西班牙 CCZZUU.TOP
+  - 🇺🇸 美国 CCZZUU.TOP
+  - 🇬🇧 英国 伦敦Microsoft公司 2
   type: select
 - name: 📢 谷歌FCM
   proxies:
@@ -273,19 +269,21 @@ proxy-groups:
   - 🎯 全球直连
   - ♻️ 自动选择
   - 8元老牌专线机场：cczzuu.top
-  - 🇭🇰 香港|@stairnode
-  - 🇭🇰 香港3|@stairnode
-  - 🇭🇰 香港4|@stairnode
-  - 🇭🇰 香港5|@stairnode
-  - 🇯🇵 日本|@stairnode
-  - 🇯🇵 日本2|@stairnode
-  - 🇯🇵 日本3|@stairnode
-  - 🇸🇬 新加坡|@stairnode
-  - 🇸🇬 新加坡2|@stairnode
-  - 🇸🇬 新加坡3|@stairnode
-  - 🇺🇸 美国|@stairnode
-  - 🇺🇸 美国2|@stairnode
-  - 🇺🇸 美国3|@stairnode
+  - 🇬🇧 英国 CCZZUU.TOP
+  - 🇬🇧 英国 CCZZUU.TOP 2
+  - 🇺🇸 美国 华盛顿Cogent通信公司
+  - 🇬🇧 英国 CCZZUU.TOP 3
+  - 🇬🇧 英国 CCZZUU.TOP 4
+  - 🇬🇧 英国 CCZZUU.TOP 5
+  - 🇬🇧 英国 CCZZUU.TOP 6
+  - 🇭🇰 香港 电讯盈科有限公司
+  - 🇬🇧 英国 CCZZUU.TOP 7
+  - 🇬🇧 英国 伦敦Microsoft公司
+  - 🇬🇧 英国 CCZZUU.TOP 8
+  - 🇺🇸 美国 华盛顿Cogent通信公司 2
+  - 🇪🇸 西班牙 CCZZUU.TOP
+  - 🇺🇸 美国 CCZZUU.TOP
+  - 🇬🇧 英国 伦敦Microsoft公司 2
   type: select
 - name: 🎯 全球直连
   proxies:
@@ -309,19 +307,21 @@ proxy-groups:
   - 🎯 全球直连
   - ♻️ 自动选择
   - 8元老牌专线机场：cczzuu.top
-  - 🇭🇰 香港|@stairnode
-  - 🇭🇰 香港3|@stairnode
-  - 🇭🇰 香港4|@stairnode
-  - 🇭🇰 香港5|@stairnode
-  - 🇯🇵 日本|@stairnode
-  - 🇯🇵 日本2|@stairnode
-  - 🇯🇵 日本3|@stairnode
-  - 🇸🇬 新加坡|@stairnode
-  - 🇸🇬 新加坡2|@stairnode
-  - 🇸🇬 新加坡3|@stairnode
-  - 🇺🇸 美国|@stairnode
-  - 🇺🇸 美国2|@stairnode
-  - 🇺🇸 美国3|@stairnode
+  - 🇬🇧 英国 CCZZUU.TOP
+  - 🇬🇧 英国 CCZZUU.TOP 2
+  - 🇺🇸 美国 华盛顿Cogent通信公司
+  - 🇬🇧 英国 CCZZUU.TOP 3
+  - 🇬🇧 英国 CCZZUU.TOP 4
+  - 🇬🇧 英国 CCZZUU.TOP 5
+  - 🇬🇧 英国 CCZZUU.TOP 6
+  - 🇭🇰 香港 电讯盈科有限公司
+  - 🇬🇧 英国 CCZZUU.TOP 7
+  - 🇬🇧 英国 伦敦Microsoft公司
+  - 🇬🇧 英国 CCZZUU.TOP 8
+  - 🇺🇸 美国 华盛顿Cogent通信公司 2
+  - 🇪🇸 西班牙 CCZZUU.TOP
+  - 🇺🇸 美国 CCZZUU.TOP
+  - 🇬🇧 英国 伦敦Microsoft公司 2
   type: select
 rules:
 - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
@@ -3843,4 +3843,3 @@ rules:
 - IP-CIDR,101.199.196.0/22,🎯 全球直连,no-resolve
 - GEOIP,CN,🎯 全球直连
 - MATCH,🐟 漏网之鱼
-socks-port: 7891
